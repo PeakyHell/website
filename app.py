@@ -1,10 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask, Blueprint
+from routes.home import home
+from routes.youtube_dl import youtube_downloader
 
+
+# App configuration
 app = Flask(__name__)
 
-@app.route("/", methods=["GET"])
-def hello_world():
-    return render_template("index.html")
 
+# Blueprints
+app.register_blueprint(home, url_prefix="/")
+app.register_blueprint(youtube_downloader, url_prefix="/yt-dl")
+
+
+# Main
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=8000)
