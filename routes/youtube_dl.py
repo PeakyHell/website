@@ -1,4 +1,3 @@
-from dotenv import dotenv_values
 from flask import Blueprint, render_template, request, send_file
 from yt_dlp import YoutubeDL
 from tempfile import TemporaryDirectory
@@ -23,7 +22,7 @@ def post_yt_dl():
         yt_options = {
             "format": "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b", # Download the best mp4 video available, or the best video if no mp4 available
             "merge_output_format": "mp4",
-            "outtmpl": output_file,
+            "outtmpl": output_file
         }
 
         with YoutubeDL(yt_options) as yt_dl:

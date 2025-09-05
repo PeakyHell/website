@@ -1,5 +1,8 @@
 FROM python:3.13
 
+# Install ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg
+
 WORKDIR /app
 
 COPY requirements.txt .
