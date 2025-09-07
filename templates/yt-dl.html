@@ -11,5 +11,10 @@
         <input type="text" name="link">
 	<input type="submit" name="submit">
     </form>
+
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+
 </body>
 </html>
