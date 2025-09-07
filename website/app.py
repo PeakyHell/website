@@ -4,7 +4,10 @@ from routes.youtube_dl import youtube_downloader
 
 
 # App configuration
-app = Flask(__name__)
+app = Flask(
+    import_name=__name__,
+    template_folder="templates"
+)
 
 
 # Blueprints
