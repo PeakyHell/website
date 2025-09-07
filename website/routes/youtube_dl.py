@@ -36,5 +36,5 @@ def post_yt_dl():
                 return res
 
         res = make_response(send_file(output_file, as_attachment=True))
-        res.set_cookie("yt-dl-error", None)
+        res.set_cookie("yt-dl-error", "")
         return res
