@@ -1,6 +1,6 @@
 services:
   website:
-    build: ./website
+    build: .
     ports:
       - 8000:8000
 

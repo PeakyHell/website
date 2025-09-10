@@ -14,12 +14,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Build Bitwarden SDK from source
 RUN git clone https://github.com/bitwarden/sdk-sm.git
-RUN cd sdk-sm/
-RUN npm install
-RUN npm run schemas
-RUN cd languages/python/
-RUN maturin develop
-RUN cd ../../../
+
+RUN cd sdk-sm/ \
+    && npm install \
+    && npm run schemas
+
+RUN cd sdk-sm/languages/python/ \
+    && maturin build --manylinux off\
+    && pip install /app/sdk-sm/target/wheels/bitwarden_sdk-1.0.0-cp313-abi3-linux_aarch64.whl
 
 # Copy rest of the files
 COPY . .
