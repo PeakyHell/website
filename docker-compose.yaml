@@ -1,11 +1,11 @@
 services:
   website:
-    build: .
+    build: ./website
     environment:
-      - BW_API_URL=/run/secrets/bw_api_url
-      - BW_IDENTITY_URL=/run/secrets/bw_identity_url
-      - BW_ACCESS_TOKEN=/run/secrets/bw_access_token
-      - POSTGRES_PASSWORD=/run/secrets/db_password
+      BW_API_URL: /run/secrets/bw_api_url
+      BW_IDENTITY_URL: /run/secrets/bw_identity_url
+      BW_ACCESS_TOKEN: /run/secrets/bw_access_token
+      POSTGRES_PASSWORD: /run/secrets/db_password
     ports:
       - 8000:8000
     secrets:
@@ -18,7 +18,7 @@ services:
     image: postgres:12
     restart: always
     environment:
-      - POSTGRES_PASSWORD=/run/secrets/db_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
     ports:
       - 5432:5432
     volumes:
