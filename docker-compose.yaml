@@ -5,7 +5,7 @@ services:
       - BW_API_URL=/run/secrets/bw_api_url
       - BW_IDENTITY_URL=/run/secrets/bw_identity_url
       - BW_ACCESS_TOKEN=/run/secrets/bw_access_token
-      - DB_PASSWORD=/run/secrets/db_password
+      - POSTGRES_PASSWORD=/run/secrets/db_password
     ports:
       - 8000:8000
     secrets:
