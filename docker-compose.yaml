@@ -15,7 +15,7 @@ services:
       - db_password
 
   database:
-    image: postgres:12
+    build: ./database
     restart: always
     environment:
       POSTGRES_PASSWORD_FILE: /run/secrets/db_password
