@@ -68,4 +68,4 @@ EXPOSE 8000
 
 
 # Start the app
-CMD ["python", "app.py"]
+CMD ["gunicorn", "-c", "gunicorn.py", "app:app"]
