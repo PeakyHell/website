@@ -1,7 +1,6 @@
 from flask import Flask, Blueprint
 from routes.home import home
 from routes.youtube_dl import youtube_downloader
-from modules.secrets import client
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 
