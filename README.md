@@ -16,3 +16,8 @@ touch secrets/bw_identity_url.txt
 touch secrets/bw_access_token.txt
 touch secrets/db_password.txt
 ```
+
+3. Generate the SSL certificate and key.
+```
+openssl req -newkey rsa:2048 -keyout nginx/certificates/key.pem -x509 -days 365 -out nginx/certificates/cert.pem -nodes
+```
