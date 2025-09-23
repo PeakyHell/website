@@ -3,6 +3,7 @@
 {% block title %}Download a YouTube video{% endblock %}
 
 {% block main %}
+<main class="main-ytdl">
 	<form method="POST" action="/yt-dl">
 		<input type="text" name="link">
 		<input type="submit" name="submit">
@@ -11,4 +12,5 @@
 	{% if error %}
 	<p>{{ error }}</p>
 	{% endif %}
+</main>
 {% endblock %}
