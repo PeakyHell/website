@@ -1,0 +1,65 @@
+header {
+	width: 100%;
+	height: 8vh;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	
+	padding: .5rem 1rem .5rem 1rem;
+
+	background: rgba(26, 27, 38, 0.9);
+	border-bottom: 3px solid rgba(51, 204, 255, 0.93);
+	color: white;
+}
+
+
+/*****************
+*
+* HEADER LOGO
+*
+******************/
+header h1.header-logo {
+
+}
+
+
+/*****************
+*
+* HEADER NAVIGATION SECTION
+*
+******************/
+header nav.header-nav-section {
+
+}
+
+header ul.header-nav-list {
+
+}
+
+header li.header-nav-list-item {
+
+}
+
+header button.header-nav-button {
+
+}
+
+header span.header-nav-button-name {
+
+}
+
+header span.header-nav-button-icon {
+
+}
+
+
+/*****************
+*
+* HEADER USER SECTION
+*
+******************/
+header nav.header-user-section {
+
+}

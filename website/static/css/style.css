@@ -25,3 +25,16 @@ a {
 	text-decoration: none;
 	color: white;
 }
+
+/* Reset Button CSS */
+button {
+	border: none;
+	background: none;
+}
+
+/* Reset Unordered List CSS */
+ul {
+	list-style-type: none; /* Remove items bullets */
+	padding: 0;
+	margin: 0;
+}
