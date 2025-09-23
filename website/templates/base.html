@@ -4,22 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<!-- Fonts and Icons -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css" integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- CSS -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/partials/nav.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/partials/footer.css') }}">
 
 	<title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-	<nav>
-		<i class="fa-solid fa-bars"></i>
-	</nav>
+	{% include 'partials/nav.html' %}
 
 	<main>{% block main %}{% endblock %}</main>
 
-	<footer>
-		&copy; 2025 - PeakyHell -&nbsp;<a href="https://github.com/PeakyHell" target="blank"><i class="fa-brands fa-github"></i> Github</a>
-	</footer>
+	{% include 'partials/footer.html' %}
 </body>
 </html>
