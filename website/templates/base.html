@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css" integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-    <title>{% block title %}{% endblock %}</title>
+	<title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <nav>
+	<nav>
+		<i class="fa-solid fa-bars"></i>
+	</nav>
 
-    </nav>
+	<main>{% block main %}{% endblock %}</main>
 
-    <main>{% block main %}{% endblock %}</main>
-
-    <footer>
-            &copy; 2025 - PeakyHell -&nbsp;<a href="https://github.com/PeakyHell" target="blank">Github</a>
-    </footer>
+	<footer>
+		&copy; 2025 - PeakyHell -&nbsp;<a href="https://github.com/PeakyHell" target="blank"><i class="fa-brands fa-github"></i> Github</a>
+	</footer>
 </body>
 </html>

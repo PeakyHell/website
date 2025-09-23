@@ -3,12 +3,12 @@
 {% block title %}Download a YouTube video{% endblock %}
 
 {% block main %}
-    <form method="POST" action="/yt-dl">
-        <input type="text" name="link">
-	<input type="submit" name="submit">
-    </form>
+	<form method="POST" action="/yt-dl">
+		<input type="text" name="link">
+		<input type="submit" name="submit">
+	</form>
 
-    {% if error %}
-    <p>{{ error }}</p>
-    {% endif %}
+	{% if error %}
+	<p>{{ error }}</p>
+	{% endif %}
 {% endblock %}
