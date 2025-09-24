@@ -4,14 +4,36 @@ header {
 
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	
+	gap: 1rem;
+
+	/* Padding around header content */
 	padding: .5rem 1rem .5rem 1rem;
 
-	background: rgba(26, 27, 38, 0.9);
-	border-bottom: 3px solid rgba(51, 204, 255, 0.93);
-	color: white;
+	background: transparent;
+}
+
+
+/*****************
+*
+* HEADER BLOCKS SIZES
+*
+******************/
+header h1.header-logo {
+	/* Logo takes 10rem of the header width */
+	width: 10rem;
+	height: 100%;
+}
+
+header nav.header-nav-section {
+	/* Navbar width adapts automatically*/
+	flex: 1;
+	height: 100%;
+}
+
+header nav.header-user-section {
+	/* User section takes 20rem of the header width */
+	width: 20rem;
+	height: 100%;
 }
 
 
@@ -20,8 +42,19 @@ header {
 * HEADER LOGO
 *
 ******************/
-header h1.header-logo {
+header h1.header-logo a {
+	/* Make link block take whole space */
+	width: 100%;
+	height: 100%;
 
+	/* Center text inside the link block */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	/* Make the logo's text italic */
+	font-style: italic;
 }
 
 
@@ -30,28 +63,49 @@ header h1.header-logo {
 * HEADER NAVIGATION SECTION
 *
 ******************/
-header nav.header-nav-section {
-
-}
-
 header ul.header-nav-list {
+	/* Ensure navbar list takes the full space */
+	width: 100%;
+	height: 100%;
 
+	/* Align buttons from left to right */
+	display: flex;
+	justify-content: flex-start;
 }
 
 header li.header-nav-list-item {
+	/* Make each item width to 10rem */
+	width: 10rem;
+	height: 100%;
 
+	/* Center the button into the item */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 header button.header-nav-button {
+	/* Button takes full width and have a height of 2rem */
+	width: 100%;
+	height: 2rem;
 
+	/* Center name and icon inside the button */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	/* Make buttons text white */
+	color: white;
 }
 
-header span.header-nav-button-name {
-
-}
-
+header span.header-nav-button-name,
 header span.header-nav-button-icon {
+	font-size: 1.5rem;
+}
 
+header button.header-nav-button:hover .header-nav-button-icon {
+	transform: scale(-1, -1);
 }
 
 
@@ -61,5 +115,10 @@ header span.header-nav-button-icon {
 *
 ******************/
 header nav.header-user-section {
+	/* Align buttons from left to right */
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 
+	font-size: 1.5rem;
 }

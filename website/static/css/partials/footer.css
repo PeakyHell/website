@@ -9,7 +9,6 @@ footer {
 
 	padding: .5rem 1rem .5rem 1rem;
 
-	background: rgba(26, 27, 38, 0.9);
-	border-top: 3px solid rgba(51, 204, 255, 0.93);
+	background: transparent;
 	color: white;
 }
