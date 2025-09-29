@@ -11,7 +11,7 @@ youtube_downloader = Blueprint("Youtube Downloader", __name__)
 @youtube_downloader.get("/")
 def get_yt_dl():
     error = request.cookies.get("yt-dl-error")
-    return render_template("yt-dl.html", error=error)
+    return render_template("tools/yt-dl.html", error=error)
 
 
 @youtube_downloader.post("/")
