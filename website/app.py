@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint
 from routes.home import home
+from routes.tools.programming_languages import lang
 from routes.tools.youtube_dl import youtube_downloader
 from werkzeug.middleware.proxy_fix import ProxyFix
 
@@ -18,4 +19,7 @@ app.wsgi_app = ProxyFix(
 
 # Blueprints
 app.register_blueprint(home, url_prefix="/")
+
+# Tools
+app.register_blueprint(lang, url_prefix="/tools/programming-languages")
 app.register_blueprint(youtube_downloader, url_prefix="/tools/yt-dl")
