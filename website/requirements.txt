@@ -1,6 +1,4 @@
 Flask==3.1.2
 gunicorn==23.0.0
 psycopg==3.2.10
-sphinx==8.2.3
-sphinx-book-theme==1.1.4
 yt-dlp==2025.9.23
