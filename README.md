@@ -12,16 +12,18 @@ cd website/
 2. Create the secrets files and write the secrets inside
 ```
 mkdir secrets/
+
 nano secrets/bw_api_url.txt
 nano secrets/bw_identity_url.txt
 nano secrets/bw_access_token.txt
 nano secrets/db_password.txt
+nano secrets/cert.pem
+nano secrets/key.pem
 ```
 
-3. Generate the SSL certificate and key.
+3. If you don't have yours, generate the SSL certificate and key.
 ```
-mkdir nginx/certificates/
-openssl req -newkey rsa:2048 -keyout nginx/certificates/key.pem -x509 -days 365 -out nginx/certificates/cert.pem -nodes
+openssl req -newkey rsa:2048 -keyout secrets/key.pem -x509 -days 365 -out secrets/cert.pem -nodes
 ```
 
 4. Create a virtual environment and install the dependencies for the web app.
@@ -53,16 +55,18 @@ cd website/
 2. Create the secrets files and write the secrets inside
 ```
 mkdir secrets/
+
 nano secrets/bw_api_url.txt
 nano secrets/bw_identity_url.txt
 nano secrets/bw_access_token.txt
 nano secrets/db_password.txt
+nano secrets/cert.pem
+nano secrets/key.pem
 ```
 
-3. Generate the SSL certificate and key.
+3. If you don't have yours, generate the SSL certificate and key.
 ```
-mkdir nginx/certificates/
-openssl req -newkey rsa:2048 -keyout nginx/certificates/key.pem -x509 -days 365 -out nginx/certificates/cert.pem -nodes
+openssl req -newkey rsa:2048 -keyout secrets/key.pem -x509 -days 365 -out secrets/cert.pem -nodes
 ```
 
 4. Build the Docker images.

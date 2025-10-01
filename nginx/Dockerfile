@@ -17,9 +17,6 @@ RUN cd documentations \
 # --- Nginx ---
 FROM nginx:latest
 
-COPY certificates/cert.pem /etc/nginx/certificates/
-COPY certificates/key.pem /etc/nginx/certificates/
-
 # Copy Sphinx documentation
 COPY --from=sphinx /sphinx/documentations/build/* /usr/share/nginx/html/docs/
 RUN rm -rf /usr/share/nginx/html/docs/_sources

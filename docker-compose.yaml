@@ -36,6 +36,9 @@ services:
     ports:
       - 80:80
       - 443:443
+    secrets:
+      - ssl_cert
+      - ssl_key
     networks:
       - frontend
 
@@ -48,6 +51,10 @@ secrets:
     file: secrets/bw_access_token.txt
   db_password:
     file: secrets/db_password.txt
+  ssl_cert:
+    file: secrets/cert.pem
+  ssl_key:
+    file: secrets/key.pem
 
 volumes:
   db-data: {}
