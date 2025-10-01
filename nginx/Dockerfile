@@ -19,7 +19,6 @@ FROM nginx:latest
 
 # Copy Sphinx documentation
 COPY --from=sphinx /sphinx/documentations/build/* /usr/share/nginx/html/docs/
-RUN rm -rf /usr/share/nginx/html/docs/_sources
 
 RUN rm /etc/nginx/conf.d/default.conf
 
