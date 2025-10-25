@@ -33,7 +33,7 @@
 #    && mv /build/sdk-sm/target/wheels/*.whl /build/
 
 
-# --- Build Website ---
+# --- Build Backend ---
 FROM python:3.13
 
 

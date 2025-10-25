@@ -1,6 +1,6 @@
 services:
-  website:
-    build: ./website
+  backend:
+    build: ./backend
     environment:
       BW_API_URL: /run/secrets/bw_api_url
       BW_IDENTITY_URL: /run/secrets/bw_identity_url

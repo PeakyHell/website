@@ -6,7 +6,7 @@
 ```
 git clone https://github.com/PeakyHell/website.git
 
-cd website/
+cd backend/
 ```
 
 2. Create the secrets files and write the secrets inside
@@ -28,7 +28,7 @@ openssl req -newkey rsa:2048 -keyout secrets/key.pem -x509 -days 365 -out secret
 
 4. Create a virtual environment and install the dependencies for the web app.
 ```
-cd website/
+cd backend/
 
 python3 -m venv venv
 source venv/bin/activate
@@ -49,7 +49,7 @@ gunicorn -c gunicorn.py app:app
 ```
 git clone https://github.com/PeakyHell/website.git
 
-cd website/
+cd backend/
 ```
 
 2. Create the secrets files and write the secrets inside
